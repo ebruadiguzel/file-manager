@@ -4,11 +4,14 @@ import { AuthGuard } from '../auth.guard';
 import { LoginComponent } from '../components/login.component';
 import { FileListComponent } from '../components/file-list.component';
 import { FileUploadComponent } from '../components/file-upload.component';
+import { AppComponent } from '../app/app.component';
 
-export const routes: Routes = [
+const routes: Routes = [
+    { path: 'index', component: AppComponent },
+
   { path: 'login', component: LoginComponent },
   { path: 'files', component: FileListComponent },
-  { path: 'upload', component: FileUploadComponent },
+  { path: 'upload', component: FileUploadComponent},
   { path: '', redirectTo: '/files', pathMatch: 'full' }
 ];
 
@@ -16,4 +19,7 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+    
+}
+

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { CommonModule, NgFor } from '@angular/common';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
+  template: '<router-outlet></router-outlet>',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  imports: [
+    CommonModule, RouterOutlet, RouterModule, NgFor],
+
 })
-export class AppComponent {
-  title = 'file-manager';
-}
+export class AppComponent { }

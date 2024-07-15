@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let file of files">
+      {{ file.name }}
+      <input [(ngModel)]="file.newName" placeholder="Yeni dosya adı" />
+      <button (click)="updateFileName(file.id, file.newName)">Güncelle</button>
+    </li>
+  </ul>
